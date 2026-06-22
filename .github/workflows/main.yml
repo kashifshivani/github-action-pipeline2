@@ -3,9 +3,6 @@ name: pipeline1
 on:
   workflow_dispatch: 
 
-env:
-  first_name: I
-
 jobs:
   my_job:
     env:
@@ -20,7 +17,7 @@ jobs:
         env:
           stmnt: My India
           
-        run: echo "Hello World, $first_name $last_name $stmnt"
+        run: echo "Hello World, ${{ vars.first_name}} $last_name $stmnt"
 
       - name: list files
         run: ls -a
