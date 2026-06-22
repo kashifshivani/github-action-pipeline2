@@ -5,8 +5,6 @@ on:
 
 jobs:
   my_job:
-    env:
-      last_name: Love
     
     name: MY JOB
     runs-on: ubuntu-latest
@@ -17,7 +15,7 @@ jobs:
         env:
           stmnt: My India
           
-        run: echo "Hello World, ${{ vars.first_name}} $last_name $stmnt"
+        run: echo "Hello World, ${{ vars.first_name}} ${{ secrets.last_name}} $stmnt"
 
       - name: list files
         run: ls -a
