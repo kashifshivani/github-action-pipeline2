@@ -9,7 +9,7 @@ env:
 jobs:
   my_job:
     env:
-      second_name: Love
+      last_name: Love
     
     name: MY JOB
     runs-on: ubuntu-latest
