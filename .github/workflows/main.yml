@@ -3,15 +3,24 @@ name: pipeline1
 on:
   workflow_dispatch: 
 
+env:
+  first_name: I
+
 jobs:
   my_job:
+    env:
+      second_name: Love
+    
     name: MY JOB
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.0 
       - name: hi
-        run: echo "Hello World"
+        env:
+          stmnt: My India
+          
+        run: echo "Hello World, $first_name $last_name"
 
       - name: list files
         run: ls -a
