@@ -20,7 +20,7 @@ jobs:
         env:
           stmnt: My India
           
-        run: echo "Hello World, $first_name $last_name $stmnt"
+        run: echo "Hello World, $"first_name $last_name $stmnt""
 
       - name: list files
         run: ls -a
